@@ -1,0 +1,44 @@
+/* #portfolio {
+  margin-top: 6rem;
+} */
+
+.portfolio {
+  font-family: montserrat;
+  height: 93vh;
+}
+
+.background {
+  background-image: url(../../../public/portback.png);
+  height: 10.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding-top: 3rem; */
+}
+
+.portfolio-text {
+  letter-spacing: 0.6rem;
+  border: 5px solid black;
+  padding: 0.9rem;
+  width: 25rem;
+  height: 4.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lower-background {
+  background-color: black;
+  height: 44.875625rem;
+  color: white;
+  padding-top: 3rem;
+}
+
+::ng-deep .mat-mdc-tab-header {
+  display: flex;
+  justify-content: center;
+}
+
+::ng-deep .mat-mdc-tab-label-container {
+  max-width: 40rem;
+}

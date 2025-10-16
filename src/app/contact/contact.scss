@@ -1,0 +1,104 @@
+.contact {
+  height: 100vh;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(0, 0, 0, 0.16) 100%),
+    #fff;
+  font-family: montserrat;
+}
+
+.contact-text {
+  letter-spacing: 0.6rem;
+  margin-top: 7rem;
+  border: 5px solid black;
+  padding: 0.9rem;
+  width: 25rem;
+  height: 4.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+}
+
+.paragraph {
+  text-align: center;
+  margin-top: 2rem;
+  max-width: 50%;
+}
+
+.paragraph-container {
+  display: flex;
+  justify-content: center;
+}
+
+.stroke {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-column: span 2;
+  line-height: 1rem;
+}
+
+.submit-button {
+  width: 8rem;
+  justify-self: center;
+  // color: black !important;
+  margin-top: 1rem;
+  font-family: montserrat;
+}
+
+//  .custom-input::placeholder{
+//   font-family: montserrat;
+//   font-weight: bold;
+//   font-size: 14px;
+//   color: #8b8b8b;
+// }
+
+// .submit-container{
+//   display: flex;
+//   justify-content: center;
+//   margin-top: 1rem;
+// }
+
+// .custom-submit{
+//   border: none;
+//   border-left: 3px solid black;
+//   border-right: 3px solid black;
+//   font-family: montserrat;
+//   padding: 0 2rem;
+//   font-weight: bold;
+//   background: transparent;
+// }
+
+::ng-deep input::placeholder {
+  color: #6b6b6b !important;
+  font-family: montserrat;
+  font-weight: bold;
+  font-size: 16px;
+  opacity: 1;
+}
+
+::ng-deep textarea::placeholder {
+  color: #6b6b6b !important;
+  font-family: montserrat;
+  font-weight: bold;
+  font-size: 16px;
+  opacity: 1;
+}
+
+// ::ng-deep input {
+//   border-bottom: 3px solid black;
+// }

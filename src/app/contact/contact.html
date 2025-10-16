@@ -1,0 +1,107 @@
+<section id="contact">
+  <div class="contact">
+    <div class="text-container">
+      <div class="contact-text">
+        <h1>CONTACT</h1>
+      </div>
+    </div>
+
+    <div class="paragraph-container">
+      <div class="paragraph">
+        <p>
+          Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius finibus. Sed
+          ornare sit amet lorem sed viverra. In vel urna quis libero viverra facilisis ut ac est.
+        </p>
+      </div>
+    </div>
+
+    <div class="stroke">
+      <img src="Black 1.png" alt="stroke" />
+    </div>
+
+    <!-- <div class="form">
+      <form action="#">
+        <input type="text" name="name" placeholder="NAME*" class="custom-input" /><br />
+        <input type="email" name="email" placeholder="EMAIL*" class="custom-input" required /><br />
+        <input
+          type="number"
+          name="number"
+          placeholder="PHONE NUMBER"
+          class="custom-input"
+          required
+        /><br />
+        <input
+          type="text"
+          name="message"
+          placeholder="YOUR MESSAGE*"
+          class="custom-input"
+          required
+        /><br />
+        <div class="submit-container">
+          <input type="submit" name="submit" class="custom-submit" required /><br />
+        </div>
+      </form>
+    </div> -->
+
+    <div class="form">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form-grid">
+        <mat-form-field color="warn" appearance="outline">
+          <input
+            matInput
+            placeholder="NAME"
+            name="name"
+            formControlName="name"
+            type="text"
+            class="custom-input"
+            required
+          />@if(contactForm.get('name')?.hasError('required')){
+          <mat-error> Name is required </mat-error>} </mat-form-field
+        ><br />
+
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            placeholder="EMAIL"
+            name="email"
+            formControlName="email"
+            type="email"
+          />@if(contactForm.get('email')?.hasError('required')){
+          <mat-error> Email is required </mat-error>
+          } @if(contactForm.get('email')?.hasError('email')){
+          <mat-error> Enter a valid email </mat-error>
+          }</mat-form-field
+        ><br />
+
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            placeholder="PHONE NUMBER"
+            name="number"
+            formControlName="tel"
+            type="tel"
+          /> </mat-form-field
+        ><br />
+
+        <mat-form-field appearance="outline">
+          <textarea
+            matInput
+            placeholder="YOUR MESSAGE"
+            name="text"
+            formControlName="message"
+            type="text"
+            required
+          ></textarea></mat-form-field
+        ><br />
+
+        <button
+          class="submit-button"
+          matButton="outlined"
+          type="submit"
+          [disabled]="contactForm.invalid"
+        >
+          <mat-icon>send</mat-icon>SUBMIT
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
