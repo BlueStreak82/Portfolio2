@@ -1,5 +1,5 @@
 .hero-section {
-  height:100vh;
+  height: 100vh;
   width: 100%;
   margin: 0px auto;
   display: flex;
@@ -7,6 +7,8 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
+  overflow-x: hidden;
+  background-color: #c4c4c4;
 }
 
 .right {
@@ -22,18 +24,18 @@
   right: 0;
   left: 0;
   z-index: 60;
-  max-width: 85rem;
+  max-width: 95rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto 8rem;
+  margin: 0 auto;
   & img {
     position: relative;
-    left: 7rem;
-    top: 6.40rem;
+    // left: 7rem;
+    top: 1rem;
     height: auto;
-    width: 43%;
+    width: 40%;
   }
 }
 
@@ -63,8 +65,8 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  top: 13rem;
-  right: 27rem;
+  top: 4rem;
+  // right: 27rem;
   font-size: 2rem;
   gap: 2rem;
   & a {
@@ -119,6 +121,3 @@
   justify-content: center;
   font-weight: 500;
 }
-
-
-

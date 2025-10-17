@@ -57,3 +57,67 @@ button a {
   font-weight: bold;
   font-family: montserrat;
 } */
+
+// .sidenav-container {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+// }
+
+.sidenav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+}
+
+.sidenav {
+  width: 15rem;
+  background-color: #c4c4c4;
+}
+
+.sidenav-content {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: black;
+  color: white;
+}
+
+.menu-button {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 4rem;
+  margin-right: 1rem;
+  & a {
+    color: white;
+    font-family: calibri;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-button {
+    display: inline-flex;
+  }
+  .nav-links {
+    display: none;
+  }
+}
