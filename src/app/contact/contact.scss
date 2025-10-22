@@ -1,20 +1,24 @@
+$fs-xl: clamp(0.9rem, 3vw, 2rem);
+$fs-w: clamp(13rem, 30vw, 25rem);
+$fs-h: clamp(3rem, 10vw, 4.625rem);
+
 .contact {
-  height: 100vh;
   background: radial-gradient(50% 50% at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(0, 0, 0, 0.16) 100%),
     #fff;
   font-family: montserrat;
 }
 
-.contact-text {
+.contact-text h1 {
   letter-spacing: 0.6rem;
   margin-top: 7rem;
   border: 5px solid black;
   padding: 0.9rem;
-  width: 25rem;
-  height: 4.625rem;
+  width: $fs-w;
+  height: $fs-h;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: $fs-xl;
 }
 
 .text-container {
@@ -25,7 +29,7 @@
 .paragraph {
   text-align: center;
   margin-top: 2rem;
-  max-width: 50%;
+  max-width: 60%;
 }
 
 .paragraph-container {
@@ -47,8 +51,8 @@
 
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-column: span 2;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(13rem, 30vw, 25rem), 1fr));
+  // grid-column: span 2;
   line-height: 1rem;
 }
 
@@ -56,7 +60,7 @@
   width: 8rem;
   justify-self: center;
   // color: black !important;
-  margin-top: 1rem;
+  margin: 1rem 0rem 5rem;
   font-family: montserrat;
 }
 
@@ -87,7 +91,7 @@
   color: #6b6b6b !important;
   font-family: montserrat;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
   opacity: 1;
 }
 
@@ -95,10 +99,24 @@
   color: #6b6b6b !important;
   font-family: montserrat;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1rem;
   opacity: 1;
 }
 
 // ::ng-deep input {
 //   border-bottom: 3px solid black;
 // }
+
+@media screen and (max-width: 768px) {
+  .contact h1 {
+    border: 4px solid black;
+  }
+
+  .paragraph {
+    max-width: 75%;
+  }
+
+  // .form-grid {
+  //   grid-template-columns: repeat(auto-fit, minmax(clamp(13rem, 10vw,15rem), 1fr));
+  // }
+}
