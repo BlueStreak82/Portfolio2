@@ -1,17 +1,9 @@
+import { HeroSection2 } from './hero-section2/hero-section2';
 import { Routes } from '@angular/router';
-import { Navbar } from './navbar/navbar';
-import { HeroSection } from './hero-section/hero-section';
-import { About } from './about/about';
-import { Portfolio } from './portfolio/portfolio';
-import { Contact } from './contact/contact';
-import { Footer } from './footer/footer';
+import { Homepage } from './homepage/homepage';
 
 export const routes: Routes = [
-  // { path: '', component: HeroSection, },
-  // { path: 'navbar', component: Navbar },
-  // { path: 'about', component: About },
-  // { path: 'portfolio', component: Portfolio },
-  // { path: 'contact', component: Contact },
-  // { path: 'footer', component: Footer },
+  { path: '', component: Homepage },
+  { path: 'hero-section2', component: HeroSection2 },
 ];
-0
+0;

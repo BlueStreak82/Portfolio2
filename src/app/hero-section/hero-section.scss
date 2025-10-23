@@ -121,3 +121,25 @@
   justify-content: center;
   font-weight: 500;
 }
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .right {
+    width: 100%;
+    height: 70%;
+    clip-path: polygon(0 0, 100% 0, 100% 59%, 0% 100%);
+  }
+
+  .main-content {
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    & img {
+      height: auto;
+      min-width: 30rem;
+    }
+  }
+}

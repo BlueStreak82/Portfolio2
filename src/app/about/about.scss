@@ -152,90 +152,145 @@ $width-continer: clamp(20rem, 30vw, 62.75rem);
   margin-top: 17rem;
 }
 
-.grand-container {
-  display: flex;
-  justify-content: center;
-}
+// .grand-container {
+//   display: flex;
+//   justify-content: center;
+// }
 
-.using-container,
-.learning-container,
-.other-container {
-  display: grid;
-  grid-template-columns: 6.25rem 6.25rem 6.25rem 6.25rem;
-  grid-template-rows: 3.125rem 9.5rem 2.5rem 9.5rem 1.5rem;
-  /* grid-template-columns: auto auto auto auto;
-  grid-template-rows: auto auto auto auto auto; */
-  /* background-color: dodgerblue; */
-  justify-content: space-between;
-  width: 62.75rem;
-  margin-top: 6rem;
-  align-items: center;
-}
+// .using-container,
+// .learning-container,
+// .other-container {
+//   display: grid;
+//   grid-template-columns: 6.25rem 6.25rem 6.25rem 6.25rem;
+//   grid-template-rows: 3.125rem 9.5rem 2.5rem 9.5rem 1.5rem;
+//   /* grid-template-columns: auto auto auto auto;
+//   grid-template-rows: auto auto auto auto auto; */
+//   /* background-color: dodgerblue; */
+//   justify-content: space-between;
+//   width: 62.75rem;
+//   margin-top: 6rem;
+//   align-items: center;
+// }
 
-.learning-container {
-  grid-template-rows: 3.125rem 9.5rem 1.5rem;
-}
+// .learning-container {
+//   grid-template-rows: 3.125rem 9.5rem 1.5rem;
+// }
 
-.other-container {
-  grid-template-rows: 3.125rem 9.5rem 1.5rem;
-}
+// .other-container {
+//   grid-template-rows: 3.125rem 9.5rem 1.5rem;
+// }
 
-.using-container div {
-  /* background-color: #f1f1f1; */
-  font-family: montserrat;
-  font-size: 1.3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+// .using-container div {
+//   /* background-color: #f1f1f1; */
+//   font-family: montserrat;
+//   font-size: 1.3rem;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
 
-.learning-container div {
-  /* background-color: #f1f1f1; */
-  font-family: montserrat;
-  font-size: 1.3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+// .learning-container div {
+//   /* background-color: #f1f1f1; */
+//   font-family: montserrat;
+//   font-size: 1.3rem;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
 
-.other-container div {
-  /* background-color: #f1f1f1; */
-  font-family: montserrat;
-  font-size: 1.3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+// .other-container div {
+//   /* background-color: #f1f1f1; */
+//   font-family: montserrat;
+//   font-size: 1.3rem;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
 
-.item1 {
-  grid-column: 1 / span 4;
-  font-size: 1.875rem;
-  font-weight: bold;
-  letter-spacing: 0.5rem;
-  margin-bottom: 1.99375rem;
-}
+// .item1 {
+//   grid-column: 1 / span 4;
+//   font-size: 1.875rem;
+//   font-weight: bold;
+//   letter-spacing: 0.5rem;
+//   margin-bottom: 1.99375rem;
+// }
 
-.item2,
-.item3,
-.item4,
-.item5,
-.item6,
-.item7,
-.item8,
-.item9,
-.item10,
-.item11,
-.item12,
-.item13,
-.item14,
-.item15,
-.item16,
-.item17 {
-  font-size: 1.5rem;
-}
+// .item2,
+// .item3,
+// .item4,
+// .item5,
+// .item6,
+// .item7,
+// .item8,
+// .item9,
+// .item10,
+// .item11,
+// .item12,
+// .item13,
+// .item14,
+// .item15,
+// .item16,
+// .item17 {
+//   font-size: 1.5rem;
+// }
 
 #portfolio {
   height: 7vh;
+}
+
+.using-container-wrapper {
+  position: relative;
+  margin: 1.5rem auto 0;
+  max-width: 75rem;
+  padding-top: clamp(0.5rem, 1.5vw, 1rem);
+  padding-bottom: clamp(1rem, 3vw, 2rem);
+  overflow: visible;
+}
+
+.using-now {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  font-size: clamp(0.7rem, 4.5vw, 1.3rem);
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: black;
+  // bottom: 2rem;
+}
+
+.using-container
+{
+  display: grid;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+  padding: clamp(0.75rem, 2vw, 1.25rem);
+  grid-template-columns: repeat(auto-fit, minmax(clamp(120px, 20vw, 180px), 1fr));
+  justify-items: center;
+  align-items: center;
+  margin-top: clamp(1rem, 3vw, 2rem);
+}
+
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.4rem, 1vw, 0.8rem);
+  padding: clamp(0.5rem, 1.6vw, 1.1rem);
+
+  img {
+    width: clamp(3rem, 10vw, 6rem);
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  p {
+    margin: 0;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+    color: #222;
+  }
 }
 
 // @media screen and (max-width: 1024px) {
@@ -270,4 +325,3 @@ $width-continer: clamp(20rem, 30vw, 62.75rem);
     max-width: 80%;
   }
 }
-
