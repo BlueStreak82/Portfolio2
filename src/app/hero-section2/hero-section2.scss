@@ -63,4 +63,64 @@
 }
 
 @media screen and (min-width: 768px) {
+  .hero-section {
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .left {
+    min-width: 50%;
+    flex-direction: column;
+    justify-content: start;
+    gap: 3rem;
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .hero-text-container {
+    margin: 4rem auto 0;
+  }
+
+  .right {
+    min-width: 50%;
+    clip-path: polygon(26% 0, 100% 0%, 100% 100%, 0 100%);
+    position: relative;
+    height: 100%;
+    img {
+      height: 90%;
+      width: auto;
+      object-fit: cover;
+      margin-left: 4rem;
+    }
+  }
+
+  .icons {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    position: relative;
+    justify-content: center;
+    right: 6rem;
+  }
+
+  .icon-container {
+    background-color: #c4c4c4;
+    padding: 0.5rem;
+    box-shadow: 2px 1px 5px 1.5px rgba(128, 128, 128, 0.37);
+    border-radius: 7px;
+  }
+
+  .name {
+    font-size: 3rem;
+    margin: 1rem 0 0.5rem;
+    line-height: 3rem;
+  }
+
+  .hi {
+    font-size: 1.5rem;
+  }
+
+  .job-title {
+    font-size: 1.1rem;
+  }
 }

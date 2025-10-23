@@ -22,7 +22,7 @@ $width-continer: clamp(20rem, 30vw, 62.75rem);
 .about h1 {
   text-align: center;
   letter-spacing: 0.5rem;
-  margin-top: 7rem;
+  // margin-top: 7rem;
   border: 5px solid black;
   width: $fs-w;
   // height: 4.625rem;
@@ -32,6 +32,7 @@ $width-continer: clamp(20rem, 30vw, 62.75rem);
   align-items: center;
   font-weight: bold;
   font-size: $fs-xl;
+  margin-top: 7rem;
 }
 
 .about-text {
@@ -68,171 +69,53 @@ $width-continer: clamp(20rem, 30vw, 62.75rem);
   margin-top: 4rem;
 }
 
-.design-development {
-  display: flex;
-  justify-content: center;
-  gap: 10rem;
-  margin-top: 6.875rem;
-  flex-wrap: wrap;
-  width: 100%;
+.design-development-managment {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 6.25rem;
+  height: auto;
+  margin: 2.5rem auto;
+  max-width: 80rem;
+  padding: 1.25rem;
 }
 
-.design {
-  position: relative;
-  width: 36rem;
+.box:nth-child(3) {
+  grid-column: span 2;
+  padding: 0 25%;
 }
 
-.design-image {
+.image {
   position: absolute;
 }
 
 .design-text {
-  position: absolute;
-  left: 2.8rem;
-  top: 1.2rem;
-  font-size: $fs-s;
-  & h3 {
-    margin-bottom: 1rem;
-    font-size: $fs-d;
-    letter-spacing: 0.5rem;
-  }
-}
-
-.development {
-  position: relative;
-  width: 36rem;
-}
-
-.development-image {
-  position: absolute;
+  margin-top: 1rem;
+  margin-left: 2rem;
 }
 
 .development-text {
-  position: absolute;
-  left: 3.2rem;
-  top: 1.6rem;
-  font-size: $fs-s;
-  & h3 {
-    margin-bottom: 1rem;
-    font-size: $fs-d;
-    letter-spacing: 0.5rem;
-  }
-}
-
-.maintenance-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 19rem;
-}
-
-.maintenance {
-  position: relative;
-  width: 37rem;
-}
-
-.maintenance-image {
-  position: absolute;
+  margin-top: 1.2rem;
+  margin-left: 2.4rem;
 }
 
 .maintenance-text {
-  position: absolute;
-  left: 4.2rem;
-  top: 1.9rem;
-  font-size: $fs-s;
-  & h3 {
-    margin-bottom: 1rem;
-    font-size: $fs-d;
-    letter-spacing: 0.5rem;
-  }
+  margin-top: 1.9rem;
+  margin-left: 3rem;
+}
+
+.head {
+  font-size: $fs-d;
+  letter-spacing: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .stroke2 {
   display: flex;
   justify-content: center;
-  margin-top: 17rem;
+  margin-top: 4rem;
 }
-
-// .grand-container {
-//   display: flex;
-//   justify-content: center;
-// }
-
-// .using-container,
-// .learning-container,
-// .other-container {
-//   display: grid;
-//   grid-template-columns: 6.25rem 6.25rem 6.25rem 6.25rem;
-//   grid-template-rows: 3.125rem 9.5rem 2.5rem 9.5rem 1.5rem;
-//   /* grid-template-columns: auto auto auto auto;
-//   grid-template-rows: auto auto auto auto auto; */
-//   /* background-color: dodgerblue; */
-//   justify-content: space-between;
-//   width: 62.75rem;
-//   margin-top: 6rem;
-//   align-items: center;
-// }
-
-// .learning-container {
-//   grid-template-rows: 3.125rem 9.5rem 1.5rem;
-// }
-
-// .other-container {
-//   grid-template-rows: 3.125rem 9.5rem 1.5rem;
-// }
-
-// .using-container div {
-//   /* background-color: #f1f1f1; */
-//   font-family: montserrat;
-//   font-size: 1.3rem;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
-
-// .learning-container div {
-//   /* background-color: #f1f1f1; */
-//   font-family: montserrat;
-//   font-size: 1.3rem;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
-
-// .other-container div {
-//   /* background-color: #f1f1f1; */
-//   font-family: montserrat;
-//   font-size: 1.3rem;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
-
-// .item1 {
-//   grid-column: 1 / span 4;
-//   font-size: 1.875rem;
-//   font-weight: bold;
-//   letter-spacing: 0.5rem;
-//   margin-bottom: 1.99375rem;
-// }
-
-// .item2,
-// .item3,
-// .item4,
-// .item5,
-// .item6,
-// .item7,
-// .item8,
-// .item9,
-// .item10,
-// .item11,
-// .item12,
-// .item13,
-// .item14,
-// .item15,
-// .item16,
-// .item17 {
-//   font-size: 1.5rem;
-// }
 
 #portfolio {
   height: 7vh;
@@ -256,11 +139,9 @@ $width-continer: clamp(20rem, 30vw, 62.75rem);
   font-weight: 700;
   letter-spacing: 4px;
   color: black;
-  // bottom: 2rem;
 }
 
-.using-container
-{
+.using-container {
   display: grid;
   gap: clamp(0.75rem, 2vw, 1.5rem);
   padding: clamp(0.75rem, 2vw, 1.25rem);
@@ -269,7 +150,6 @@ $width-continer: clamp(20rem, 30vw, 62.75rem);
   align-items: center;
   margin-top: clamp(1rem, 3vw, 2rem);
 }
-
 
 .skill-card {
   display: flex;
@@ -293,16 +173,6 @@ $width-continer: clamp(20rem, 30vw, 62.75rem);
   }
 }
 
-// @media screen and (max-width: 1024px) {
-//   .about {
-//     background-color: red;
-//   }
-
-//   .about-text {
-//     margin-top: -2rem;
-//   }
-// }
-
 @media screen and (max-width: 768px) {
   $fs-400: 1rem;
   $fs-500: 1.25rem;
@@ -321,7 +191,14 @@ $width-continer: clamp(20rem, 30vw, 62.75rem);
     margin-top: 2rem;
   }
 
-  .design-text p {
-    max-width: 80%;
+  .design-development-managment {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    justify-items: flex-start;
+  }
+
+  .box:nth-child(3) {
+    grid-column: span 1;
+    padding: 0;
   }
 }
