@@ -87,7 +87,10 @@
             formControlName="message"
             type="text"
             required
-          ></textarea></mat-form-field
+          >
+          </textarea
+          >@if(contactForm.get('message')?.hasError('required')){
+          <mat-error> Enter the message you want to relay </mat-error>}</mat-form-field
         ><br />
 
         <button
@@ -95,10 +98,16 @@
           matFab
           extended
           type="submit"
-          [disabled]="contactForm.invalid"
+          [disabled]="sending || !contactForm.valid"
         >
-          <mat-icon>send</mat-icon>SUBMIT
+          <mat-icon class="maticon">send</mat-icon>{{ sending ? 'Sending...' : 'Send' }}
         </button>
+
+        @if (emailSent) {
+        <p class="success">✅ Message sent successfully!</p>
+        } @else if (emailError) {
+        <p class="error">❌ Failed to send message. Try again.</p>
+        }
       </form>
     </div>
   </div>

@@ -4,29 +4,38 @@
 // Learn more about theming and how to use it for your application's
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
+@use './app/themes/grey_theme-colors.scss' as theme;
 
 html {
+  // @include mat.theme(
+  //   (
+  //     color: (
+  //       primary: mat.$azure-palette,
+  //       tertiary: mat.$blue-palette,
+  //     ),
+  //     typography: Roboto,
+  //     density: 0,
+  //   )
+  // );
   @include mat.theme(
     (
       color: (
-        primary: mat.$azure-palette,
-        tertiary: mat.$blue-palette,
+        primary: theme.$primary-palette,
+        tertiary: theme.$tertiary-palette,
       ),
-      typography: Roboto,
-      density: 0,
     )
   );
 }
 
-$default-theme: mat.define-theme(
-  (
-    color: (
-      theme-type: light,
-      primary: mat.$azure-palette,
-      tertiary: mat.$azure-palette,
-    ),
-  )
-);
+// $default-theme: mat.define-theme(
+//   (
+//     color: (
+//       theme-type: light,
+//       primary: mat.$azure-palette,
+//       tertiary: mat.$azure-palette,
+//     ),
+//   )
+// );
 body {
   // Default the application to a light color theme. This can be changed to
   // `dark` to enable the dark color theme, or to `light dark` to defer to the
