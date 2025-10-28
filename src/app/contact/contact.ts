@@ -46,15 +46,15 @@ export class Contact {
 
     emailjs
       .send(
-        'service_z1b6f5d', // Replace with your service ID
-        'template_1n5w06o', // Replace with your template ID
+        'service_z1b6f5d',
+        'template_1n5w06o',
         {
           name: this.contactForm.value.name,
           email: this.contactForm.value.email,
           message: this.contactForm.value.message,
           phoneNumber: this.contactForm.value.tel,
         },
-        'p36eWslKvgpZkhePt' // Replace with your public key
+        'p36eWslKvgpZkhePt'
       )
       .then(
         (result: EmailJSResponseStatus) => {
