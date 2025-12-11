@@ -104,14 +104,25 @@ button a {
 
 .nav-links {
   display: flex;
-  gap: 4rem;
-  margin-right: 1rem;
-  & a {
-    color: white;
-    font-family: calibri;
-    font-size: 1.3rem;
-    font-weight: bold;
-  }
+  gap: 3rem;
+  margin-right: 2rem;
+}
+
+.nav-ref {
+  color: white !important;
+  font-family: montserrat;
+  font-size: 1.3rem;
+  opacity: 0.7;
+  font-weight: 400;
+  transition: opacity 1s;
+}
+
+.nav-ref:hover {
+  opacity: 1 !important;
+}
+
+.nav-ref:active {
+  background-color: #c4c4c4;
 }
 
 @media (max-width: 768px) {
@@ -120,5 +131,10 @@ button a {
   }
   .nav-links {
     display: none;
+  }
+
+  mat-nav-list a[mat-list-item] {
+    display: flex;
+    align-items: center !important;
   }
 }

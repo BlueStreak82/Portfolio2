@@ -14,10 +14,18 @@
 <mat-sidenav-container class=".sidenav-container">
   <mat-sidenav #drawer class="sidenav" mode="over">
     <mat-nav-list>
-      <a mat-list-item (click)="toHome()">Home</a>
-      <a mat-list-item (click)="toAbout()">About</a>
-      <a mat-list-item (click)="toSkills()">Skills</a>
-      <a mat-list-item (click)="toContact()">Contact</a>
+      <a mat-list-item class="drawer-elements" (click)="toHome()">
+        <mat-icon matListIcon>home</mat-icon> Home</a
+      >
+      <a mat-list-item class="drawer-elements" (click)="toAbout()"
+        ><mat-icon matListIcon>info</mat-icon> About</a
+      >
+      <a mat-list-item class="drawer-elements" (click)="toSkills()"
+        ><mat-icon matListIcon>build</mat-icon> Skills</a
+      >
+      <a mat-list-item class="drawer-elements" (click)="toContact()"
+        ><mat-icon matListIcon>call</mat-icon> Contact</a
+      >
     </mat-nav-list>
   </mat-sidenav>
 
@@ -29,10 +37,10 @@
       <span class="title">My Portfolio</span>
 
       <div class="nav-links">
-        <a mat-button (click)="toHome()">Home</a>
-        <a mat-button (click)="toAbout()">About</a>
-        <a mat-button (click)="toSkills()"> Skills </a>
-        <a mat-button (click)="toContact()">Contact</a>
+        <a mat-button class="nav-ref" (click)="toHome()">Home</a>
+        <a mat-button class="nav-ref" (click)="toAbout()">About</a>
+        <a mat-button class="nav-ref" (click)="toSkills()"> Skills </a>
+        <a mat-button class="nav-ref" (click)="toContact()">Contact</a>
       </div>
     </mat-toolbar>
 

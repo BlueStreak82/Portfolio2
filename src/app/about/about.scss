@@ -3,7 +3,7 @@ $fs-500: 1.25rem;
 $fs-xl: clamp(0.9rem, 3vw, 2rem);
 $fs-w: clamp(13rem, 30vw, 25rem);
 $fs-h: clamp(3rem, 10vw, 4.625rem);
-$fs-s: clamp(1rem, 2vw, 1.15rem);
+$fs-s: clamp(1rem, 3vw, 1.15rem);
 $fs-d: clamp(1rem, 3vw, 1.5rem);
 $width-continer: clamp(20rem, 30vw, 62.75rem);
 
@@ -45,6 +45,7 @@ $width-continer: clamp(20rem, 30vw, 62.75rem);
   margin-top: 3rem;
   max-width: 60%;
   font-size: $fs-s;
+  font-weight: 400;
 }
 
 .about-paragraph-container {
@@ -93,6 +94,7 @@ $width-continer: clamp(20rem, 30vw, 62.75rem);
 .design-text {
   margin-top: 1rem;
   margin-left: 2rem;
+  
 }
 
 .development-text {
